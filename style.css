@@ -168,6 +168,7 @@ body {
 /* Browse page code*/
 
 .adPost{
+    text-decoration: none;
     transition: all ease-in-out 0.3s;
     color: #E2B714;
     background-color: #2C2E31;
