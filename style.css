@@ -10,7 +10,7 @@ body {
 
 }
 
-
+/* nav bar and footer code*/
 .navBar {
     border-radius: 0.5em;
     margin-top: 6em;
@@ -47,6 +47,14 @@ body {
     text-align: left;
 }
 
+.footerBar {
+    border-radius: 0.5em;
+    padding: 1.25em;
+    background-color: #2C2E31;
+}
+
+
+/* home page code*/
 .contentBlock {
     display: flex;
     flex-wrap: wrap;
@@ -93,12 +101,6 @@ body {
     top: 1.1em;
     right: 2em;
     text-align: center;
-}
-
-.footerBar {
-    border-radius: 0.5em;
-    padding: 1.25em;
-    background-color: #2C2E31;
 }
 
 .profileButton {
@@ -162,6 +164,30 @@ body {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+
+/* Browse page code*/
+
+.adPost{
+    transition: all ease-in-out 0.3s;
+    color: #E2B714;
+    background-color: #2C2E31;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    margin: 1em;
+}
+.adPost:hover{
+    transition: all ease-in-out 0.3s;
+    color: #E2B714;
+    background-color: rgb(38, 39, 43);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+.adPost p{
+    color: #3ab09e;
+}
+
+
+/* Mobile size media screen*/
 @media screen and (max-width: 550px) {
 
     .footerBar{
@@ -201,27 +227,7 @@ body {
 
 }
 
-/* Browse page code*/
-
-.adPost{
-    transition: all ease-in-out 0.3s;
-    color: #E2B714;
-    background-color: #2C2E31;
-    border-radius: 0.2em;
-    padding: 0.5em;
-    margin: 1em;
-}
-.adPost:hover{
-    transition: all ease-in-out 0.3s;
-    color: #E2B714;
-    background-color: rgb(38, 39, 43);
-    border-radius: 0.2em;
-    padding: 1em;
-}
-
-
-
-
+/* desktop size media screen*/
 @media screen and (min-width: 1200px) {
 
     body {
