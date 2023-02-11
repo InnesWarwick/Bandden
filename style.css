@@ -200,6 +200,28 @@ body {
     }
 
 }
+
+/* Browse page code*/
+
+.adPost{
+    transition: all ease-in-out 0.3s;
+    color: #E2B714;
+    background-color: #2C2E31;
+    border-radius: 0.2em;
+    padding: 0.5em;
+    margin: 1em;
+}
+.adPost:hover{
+    transition: all ease-in-out 0.3s;
+    color: #E2B714;
+    background-color: rgb(38, 39, 43);
+    border-radius: 0.2em;
+    padding: 1em;
+}
+
+
+
+
 @media screen and (min-width: 1200px) {
 
     body {
