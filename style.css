@@ -186,7 +186,11 @@ body {
 .adPost p{
     color: #3ab09e;
 }
-
+/*ad page code*/
+.profileInfo{
+    background-color: #2C2E31;
+    border-radius: 1em;
+}
 
 /* Mobile size media screen*/
 @media screen and (max-width: 550px) {
