@@ -189,7 +189,15 @@ body {
 /*ad page code*/
 .profileInfo{
     background-color: #2C2E31;
-    border-radius: 1em;
+    border-radius: 0.2em;
+}
+.profileInfo h3{
+    padding:1em;
+    color: #E2B714;
+}
+.profileInfo h2{
+    color: #E2B714;
+    
 }
 
 /* Mobile size media screen*/
