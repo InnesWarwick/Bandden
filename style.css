@@ -109,11 +109,12 @@ body {
     width: 0px;
     border: 8px solid;
     border-color:
-    #be9c21 #d4bb60 #E2B714 #E2B714;
+        #be9c21 #d4bb60 #E2B714 #E2B714;
     transform: rotate(180deg);
     float: right;
 }
-.leftContentHome:hover .profileButton{
+
+.leftContentHome:hover .profileButton {
     transition: all ease-in-out 0.6s;
     height: 0px;
     width: 0px;
@@ -123,7 +124,8 @@ body {
     transform: rotate(45deg);
     float: right;
 }
-.leftContentHome:hover{
+
+.leftContentHome:hover {
     background-color: rgb(38, 39, 43);
     transition: all ease-in-out 0.3s;
 }
@@ -134,24 +136,27 @@ body {
     width: 0px;
     border: 8px solid;
     border-color:
-    #379688 #56c2b2 #3ab09e #3ab09e;
+        #379688 #56c2b2 #3ab09e #3ab09e;
     transform: rotate(180deg);
     float: right;
 }
-.rightContentHome:hover .browseButtonPage{
+
+.rightContentHome:hover .browseButtonPage {
     transition: all ease-in-out 0.6s;
     height: 0px;
     width: 0px;
     border: 8px solid;
     border-color:
-    #E2B714 #ad8f1f transparent transparent;
+        #E2B714 #ad8f1f transparent transparent;
     transform: rotate(45deg);
     float: right;
 }
-.rightContentHome:hover{
+
+.rightContentHome:hover {
     background-color: rgb(38, 39, 43);
     transition: all ease-in-out 0.3s;
 }
+
 .rightContentHome h1 {
     color: #2d9484;
 }
@@ -159,7 +164,7 @@ body {
 .rightContentHome p {
     font-size: 20px;
     background: rgb(226, 183, 20);
-    background: linear-gradient(180deg, rgba(58, 176, 158, 1)  20%,rgba(226, 183, 20, 1) 60%);
+    background: linear-gradient(180deg, rgba(58, 176, 158, 1) 20%, rgba(226, 183, 20, 1) 60%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -167,7 +172,7 @@ body {
 
 /* Browse page code*/
 
-.adPost{
+.adPost {
     text-decoration: none;
     transition: all ease-in-out 0.3s;
     color: #E2B714;
@@ -176,36 +181,51 @@ body {
     padding: 0.5em;
     margin: 1em;
 }
-.adPost:hover{
+
+.adPost:hover {
     transition: all ease-in-out 0.3s;
     color: #E2B714;
     background-color: rgb(38, 39, 43);
     border-radius: 0.2em;
     padding: 1em;
 }
-.adPost p{
+
+.adPost p {
     color: #3ab09e;
 }
+
 /*ad page code*/
-.profileInfo{
+
+.profileInfo {
     background-color: #2C2E31;
-    border-radius: 0.2em;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: auto;
+    margin-top: 1em;
 }
-.profileInfo h3{
-    padding:1em;
+
+.profileInfo h3 {
     color: #E2B714;
+    float: right;
 }
-.profileInfo h2{
-    color: #E2B714;
-    
+
+.profileInfo h3 a {
+    padding: 0.3em;
+    border-radius: 0.3em;
+    background-color: #151516;
+}
+
+.profileInfo h2 {
+    color: #2d9484;
 }
 
 /* Mobile size media screen*/
 @media screen and (max-width: 550px) {
 
-    .footerBar{
+    .footerBar {
         margin-top: 1em;
     }
+
     .navBar {
         border-radius: 0.5em;
         margin-top: 6em;
@@ -250,17 +270,20 @@ body {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-    
+
     }
+
     .contentBlock {
         display: flex;
         flex-wrap: nowrap;
         flex: 1;
     }
-    .leftContentHome{
+
+    .leftContentHome {
         margin-right: 1em;
     }
-    .rightContentHome{
+
+    .rightContentHome {
         margin-left: 1em;
     }
 }
