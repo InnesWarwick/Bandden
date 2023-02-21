@@ -235,6 +235,7 @@ body {
     }
 
     .navBar {
+        
         border-radius: 0.5em;
         margin-top: 6em;
         display: flex;
