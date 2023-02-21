@@ -61,6 +61,11 @@ body {
     flex: 1;
 }
 
+.col-2 .adPost {
+    box-sizing: border-box;
+    width: 45%;
+}
+
 .leftContentHome {
     float: left;
     padding: 2em;
@@ -227,6 +232,47 @@ body {
     background-color: #2C2E31;
 }
 
+
+/* profile page code */
+.profilePageDetails{
+    background-color: #2C2E31;
+    border-radius: 1em;
+    margin: 1em;
+}
+
+/*contact us page*/
+.contactForm{
+    background-color: #2C2E31;
+    width: 100%;
+    margin: auto;
+    border-radius: 1em;
+    margin: 0.3em;
+}
+.firstNameBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.lastNameBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.emailBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.queryArea{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+
 /* Mobile size media screen*/
 @media screen and (max-width: 550px) {
 
@@ -235,7 +281,6 @@ body {
     }
 
     .navBar {
-        
         border-radius: 0.5em;
         margin-top: 6em;
         display: flex;
