@@ -252,18 +252,30 @@ body {
 .fnameInput{
     background-color: #2C2E31;
     border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
 }
 .lnameInput{
     background-color: #2C2E31;
     border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
 }
 .emailInput{
     background-color: #2C2E31;
     border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
 }
 .queryArea{
     background-color: #2C2E31;
     border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
 }
 .firstNameBox{
     background-color: #26282b;
