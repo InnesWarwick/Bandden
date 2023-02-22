@@ -255,6 +255,7 @@ body {
     color: #E2B714;
     padding: 0.5em;
     border: 0px;
+    outline: none;
 }
 .lnameInput{
     background-color: #2C2E31;
@@ -262,6 +263,7 @@ body {
     color: #E2B714;
     padding: 0.5em;
     border: 0px;
+    outline: none;
 }
 .emailInput{
     background-color: #2C2E31;
@@ -269,6 +271,7 @@ body {
     color: #E2B714;
     padding: 0.5em;
     border: 0px;
+    outline: none;
 }
 .queryArea{
     background-color: #2C2E31;
@@ -276,6 +279,7 @@ body {
     color: #E2B714;
     padding: 0.5em;
     border: 0px;
+    outline: none;
 }
 .firstNameBox{
     background-color: #26282b;
