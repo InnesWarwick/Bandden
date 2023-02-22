@@ -281,6 +281,15 @@ body {
     border: 0px;
     outline: none;
 }
+.submitButton{
+    background-color: #E2B714;
+    border-radius: 0.5em;
+    color: #26282b;
+    padding: 0.5em;
+    margin: 1em;
+    float: right;
+    border: none;
+}
 .firstNameBox{
     background-color: #26282b;
     padding: 0.7em;
