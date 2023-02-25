@@ -60,6 +60,9 @@ body {
 }
 
 .col-2 .adPost {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
     box-sizing: border-box;
     width: 45%;
 }
@@ -330,6 +333,9 @@ body {
         margin-top: 1em;
     }
     .col-2 .adPost {
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
         box-sizing: border-box;
         width: 100%;
     }
@@ -373,6 +379,11 @@ body {
     .col-2 .adPost {
         box-sizing: border-box;
         width: 22.5%;
+    }
+    .col-2 .adPost {
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
     .contactForm{
         background-color: #2C2E31;
