@@ -179,7 +179,7 @@ body {
 
 .adPost {
     text-decoration: none;
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.6s;
     color: #E2B714;
     background-color: #2C2E31;
     border-radius: 0.2em;
@@ -192,9 +192,11 @@ body {
     color: #E2B714;
     background-color: rgb(38, 39, 43);
     border-radius: 0.2em;
-    padding: 1em;
+    padding: 0.5em;
 }
-
+.adPost:hover p{
+    color: #E2B714;
+}
 .adPost p {
     color: #3ab09e;
 }
@@ -367,28 +369,18 @@ body {
 
 /* desktop size media screen*/
 @media screen and (min-width: 1200px) {
-
-    body {
-        margin: 0 1em;
-        background-color: #323437;
-        font-family: 'Roboto Mono', monospace;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-
+ 
+    .col-2 .adPost {
+        box-sizing: border-box;
+        width: 22.5%;
+    }
+    .contactForm{
+        background-color: #2C2E31;
+        width: 70%;
+        margin: auto;
+        border-radius: 1em;
+        margin: 0.3em;
+        color: #E2B714;
     }
 
-    .contentBlock {
-        display: flex;
-        flex-wrap: nowrap;
-        flex: 1;
-    }
-
-    .leftContentHome {
-        margin-right: 1em;
-    }
-
-    .rightContentHome {
-        margin-left: 1em;
-    }
 }
