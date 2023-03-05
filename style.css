@@ -195,7 +195,7 @@ select{
     border: 0px;
     margin: 1em;
     padding: 1em;
-    width: 6em;
+    width: 7em;
     border-radius: 1em;
 }
 
@@ -348,6 +348,17 @@ select{
 /* Mobile size media screen*/
 @media screen and (max-width: 671px) {
 
+    select{
+    
+        background-color: #26282b;
+        color: #E2B714;
+        outline: none;
+        border: 0px;
+        margin: 1em;
+        padding: 1em;
+        width: 6em;
+        border-radius: 1em;
+    }
     .footerBar {
         margin-top: 1em;
     }
@@ -393,7 +404,17 @@ select{
 
 /* desktop size media screen*/
 @media screen and (min-width: 1200px) {
- 
+    select{
+    
+        background-color: #26282b;
+        color: #E2B714;
+        outline: none;
+        border: 0px;
+        margin: 1em;
+        padding: 1em;
+        width: 9em;
+        border-radius: 1em;
+    }
     .col-2 .adPost {
         box-sizing: border-box;
         width: 22.5%;
