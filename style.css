@@ -9,11 +9,19 @@ body {
     min-height: 100vh;
 
 }
-
+.logoDiv{
+    display: flex;
+    width: 100%;
+}
+.logoDiv img{
+    padding: 2em;
+    margin: auto;
+    width: 15em;
+}
 /* nav bar and footer code*/
 .navBar {
+    margin-top: 0em;
     border-radius: 0.5em;
-    margin-top: 6em;
     display: flex;
     padding: 1.25em 0;
     background-color: #2C2E31;
@@ -180,13 +188,14 @@ body {
 
 /* Browse page code*/
 select{
+    
     background-color: #26282b;
     color: #E2B714;
     outline: none;
     border: 0px;
     margin: 1em;
     padding: 1em;
-    width: 12em;
+    width: 6em;
     border-radius: 1em;
 }
 
@@ -351,7 +360,6 @@ select{
     }
     .navBar {
         border-radius: 0.5em;
-        margin-top: 6em;
         display: flex;
         padding: 1.25em;
         background-color: #2C2E31;
