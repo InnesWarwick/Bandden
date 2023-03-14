@@ -407,7 +407,6 @@ select{
 /* desktop size media screen*/
 @media screen and (min-width: 1200px) {
     select{
-    
         background-color: #26282b;
         color: #E2B714;
         outline: none;
@@ -416,6 +415,9 @@ select{
         padding: 1em;
         width: 9em;
         border-radius: 1em;
+    }
+    .contactForm{
+        min-width: 50em;
     }
     .col-2 .adPost {
         box-sizing: border-box;
@@ -426,13 +428,13 @@ select{
         margin-top: 1em;
         margin-bottom: 1em;
     }
-    .contactForm{
-        background-color: #2C2E31;
-        width: 70%;
+    .contentBlock{
         margin: auto;
-        border-radius: 1em;
-        margin: 0.3em;
-        color: #E2B714;
+        max-width: 75em;
+    }
+    .contentBlock p{
+        line-height: 1.6;
+        font-size: large;
     }
 
 }
