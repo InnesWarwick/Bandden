@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+body {
+    margin: 0 1em;
+    background-color: #323437;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+.logoDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+.logoDiv img{
+    padding: 2em;
+    margin: auto;
+    width: 15em;
+}
+.logoDiv .profileIcon{
+    transition: ease-in-out 0.2s;
+    position: absolute;
+    bottom: 0em;
+    left: 0em;
+    width: 3em;
+}
+.logoDiv .profileIcon:hover{
+    transition: ease-in-out 0.4s;
+    opacity: 50%;
+}
+
+
+/* nav bar and footer code*/
+.navBar {
+    margin-top: 0em;
+    border-radius: 0.5em;
+    display: flex;
+    padding: 1.25em 0;
+    background-color: #2C2E31;
+    gap: 3em;
+    position: relative;
+}
+
+.navBar a {
+    transition: ease-in-out 0.5s;
+    text-decoration: none;
+    margin: auto;
+    color: #E2B714;
+    font-size: large;
+}
+
+.navBar a:hover {
+    transition: ease-in-out 0.5s;
+    text-decoration: none;
+    margin: auto;
+    color: #646669;
+    font-size: large;
+}
+
+.homeButton,
+.browseButton {
+    flex: 2;
+    text-align: right;
+}
+
+.browseButton {
+    text-align: left;
+}
+
+.footerBar {
+    border-radius: 0.5em;
+    padding: 1.25em;
+    background-color: #2C2E31;
+}
+
+.contentBlock {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.col-2 .adPost {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-sizing: border-box;
+    width: 45%;
+}
+
+
+
+/* Mobile size media screen*/
+@media screen and (max-width: 671px) {
+
+    select{
+    
+        background-color: #26282b;
+        color: #E2B714;
+        outline: none;
+        border: 0px;
+        margin: 1em;
+        padding: 1em;
+        width: 6em;
+        border-radius: 1em;
+    }
+    .footerBar {
+        margin-top: 1em;
+    }
+    .col-2 .adPost {
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .navBar {
+        border-radius: 0.5em;
+        display: flex;
+        padding: 1.25em;
+        background-color: #2C2E31;
+
+    }
+
+    .navBar a {
+        transition: ease-in-out 0.5s;
+        text-decoration: none;
+        margin: auto;
+        color: #E2B714;
+        font-size: large;
+    }
+
+    .navBar a:hover {
+        transition: ease-in-out 0.5s;
+        text-decoration: none;
+        margin: auto;
+        color: #646669;
+        font-size: large;
+    }
+
+    .contactUs {
+        position: relative;
+        top: 0;
+        right: 0;
+        text-align: center;
+    }
+
+}
+
+
+/* desktop size media screen*/
+@media screen and (min-width: 1200px) {
+    select{
+        background-color: #26282b;
+        color: #E2B714;
+        outline: none;
+        border: 0px;
+        margin: 1em;
+        padding: 1em;
+        width: 9em;
+        border-radius: 1em;
+    }
+    .contactForm{
+        min-width: 50em;
+    }
+    .col-2 .adPost {
+        box-sizing: border-box;
+        width: 22.5%;
+    }
+    .col-2 .adPost {
+        margin: auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+    .contentBlock{
+        margin: auto;
+        max-width: 75em;
+    }
+    .contentBlock p{
+        line-height: 1.6;
+        font-size: large;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+

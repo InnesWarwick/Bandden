@@ -1,0 +1,86 @@
+
+/*contact us page*/
+.contactForm{
+    background-color: #2C2E31;
+    width: 100%;
+    margin: auto;
+    border-radius: 1em;
+    margin: 0.3em;
+    color: #E2B714;
+}
+.fnameInput{
+    background-color: #2C2E31;
+    border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
+    outline: none;
+}
+.lnameInput{
+    background-color: #2C2E31;
+    border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
+    outline: none;
+}
+.emailInput{
+    background-color: #2C2E31;
+    border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
+    outline: none;
+}
+.queryArea{
+    background-color: #2C2E31;
+    border-radius: 0.5em;
+    color: #E2B714;
+    padding: 0.5em;
+    border: 0px;
+    outline: none;
+}
+.submitButton{
+    background-color: #E2B714;
+    border-radius: 0.5em;
+    color: #26282b;
+    padding: 0.5em;
+    margin: 1em;
+    float: right;
+    border: none;
+}
+.firstNameBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.lastNameBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.emailBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.queryBox{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+.querys{
+    background-color: #26282b;
+    padding: 0.7em;
+    border-radius: 0.5em;
+    margin: 1em;
+}
+
+
+
+
+
