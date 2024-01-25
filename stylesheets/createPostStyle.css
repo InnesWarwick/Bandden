@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.postForm{
+
+    background-color: #2C2E31;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 3em;
+    padding: 3em;
+
+}
+
+.title h3{
+
+    color: #E2B714;
+    font-size: 3em;
+    margin: 0.1em;
+}
+
+.postBox h3{
+    font-size: 3em;
+    margin: 0.2em;
+    color: #E2B714;
+}
+
+input[type=text] {
+    margin: 1em;
+    border: none;
+    background-color: #2C2E31;
+    transition: width 0.4s ease-in-out;
+    border-radius: 4px;
+    padding: 0.5em;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5em;
+    color: #2d9484;
+}
+
+input[type=text]:focus {
+    outline: none;
+    border: none;
+    background-color: #323437;
+    transition: width 0.4s ease-in-out;
+}
+
+.post{
+    transition: width 0.4s ease-in-out;
+    color: #2d9484;
+    font-size: 1.5em;
+    margin: 2em;
+    padding: 1em;
+    border: none;
+    outline: none;
+    background-color: #2C2E31;
+    border-radius: 1em;
+}
+.post:focus{
+
+    background-color: #323437;
+
+}
+
+
+input[type=submit] {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bolder;
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    background-color: #E2B714;
+    padding: 0.6em;
+    margin: 2em;
+    color: #2C2E31;
+    transition: all ease-in-out 0.5s;
+}
+input[type=submit]:hover {
+    background-color: #2C2E31;
+    color: #E2B714;
+    transition: all ease-in-out 0.3s;
+}
