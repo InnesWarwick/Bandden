@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,7 +27,7 @@
 
     <main class="contentBlock">
        
-    <div class="postForm">
+    <form class="postForm" method = "post" action = "createPost.php">
             <div class="title">
                 <h3 class="titleText">Title</h3>
                 <input type="text" class="fnameInput" name="firstname" placeholder="Title...">
@@ -36,7 +37,7 @@
                 <textarea name="post" class="post" placeholder = "Post content..." cols="100" rows="2"></textarea>
             </div>
             <input type="submit" class="submitButton" value="Submit">
-        </div>
+    </form>
     </main>
 
     <div class="footerBar"></div>

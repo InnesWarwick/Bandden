@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +16,7 @@
     <div class="logoDiv">
         <img src="BanndenLogo.png" alt="website logo">
         <a href="profile.php">
-        <img src="icons/account_circle_FILL0_wght400_GRAD-25_opsz40.png" alt="profile photo" class="profileIcon">
+            <img src="icons/account_circle_FILL0_wght400_GRAD-25_opsz40.png" alt="profile photo" class="profileIcon">
         </a>
     </div>
     <div class="navBar">
@@ -23,130 +25,39 @@
         <a class="contactUs" href="contactUs.php"> contact us</a>
     </div>
     <div class="filters">
-    <select name="distance" class="filterDistance">
-        <option value="" disabled selected>Distance</option>
-        <option value="5km">5km</option>
-        <option value="20km">20km</option>
-        <option value="50km">50km</option>
-        <option value="100km">100km</option>
-    </select>
-    <select name="type" class="filterType">
-        <option value="" disabled selected>Ad Type</option>
-        <option value="band">Band</option>
-        <option value="work">Work</option>
-        <option value="tracking">Tracking</option>
-        <option value="session">Session</option>
-    </select>
-    <select name="date" class="filterDate">
-        <option value="" disabled selected>Order</option>
-        <option value="band">Oldest</option>
-        <option value="work">Newest</option>
-    </select>
-    <a class="plus-button plus-button--large" href="createPost.php"></a>
+        <select name="distance" class="filterDistance">
+            <option value="" disabled selected>Distance</option>
+            <option value="5km">5km</option>
+            <option value="20km">20km</option>
+            <option value="50km">50km</option>
+            <option value="100km">100km</option>
+        </select>
+        <select name="type" class="filterType">
+            <option value="" disabled selected>Ad Type</option>
+            <option value="band">Band</option>
+            <option value="work">Work</option>
+            <option value="tracking">Tracking</option>
+            <option value="session">Session</option>
+        </select>
+        <select name="date" class="filterDate">
+            <option value="" disabled selected>Order</option>
+            <option value="band">Oldest</option>
+            <option value="work">Newest</option>
+        </select>
+        <a class="plus-button plus-button--large" href="createPost.php"></a>
     </div>
-    
-</div>
+
     <main class="contentBlock col-2">
-        <a class="adPost" href ="advert.php" >
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-            ex in vehicula laoreet, eros velit bibendum</p>
-        </a>
-        <a class="adPost" href ="advert.php" >
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
-        <a class="adPost" href ="advert.php" href ="advert.php">
-            <h1>Ad  title</h1>
-            <p>onec sed tortor at nulla congue dignissim. Praesent pretium,
-                ex in vehicula laoreet, eros velit bibendum
-            </p>
-        </a>
 
-
+    <?php
+        require_once("Post.php");
+        $post = new Post();
+        $posts = $post->getPosts();
+    ?>
 
     </main>
     <div class="footerBar"></div>
-    
+
 </body>
+
 </html>
