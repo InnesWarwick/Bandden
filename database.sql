@@ -1,31 +1,34 @@
+-- Drop the database if it exists
 DROP DATABASE IF EXISTS bandden;
+
+-- Create the database
 CREATE DATABASE bandden;
 
+-- Create the users table
 CREATE TABLE bandden.users (
   user_id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(32) UNIQUE NOT NULL,
   email VARCHAR(128) NOT NULL,
   password VARCHAR(60) NOT NULL,
-  user_role VARCHAR(24) NOT NULL DEFAULT "Member"
+  user_role VARCHAR(24) NOT NULL DEFAULT 'Member'
 );
 
-
+-- Create the posts table
 CREATE TABLE bandden.posts (
-  post_id INT NOT NULL,
+  post_id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT NOT NULL,
   title VARCHAR(64) NOT NULL,
   content VARCHAR(2400) NOT NULL,
-  PRIMARY KEY(post_id, user_id),
-  FOREIGN KEY (user_id) REFERENCES users(user_id),
+  FOREIGN KEY (user_id) REFERENCES bandden.users(user_id)
 );
 
+-- Insert into users table
+INSERT INTO bandden.users(username, email, password) VALUES
+('barrymusic', 'barry@music.com', '1234qwerty'),
+('steveOnTheTown', 'steve05@music.com', 'steve33');
 
-INSERT INTO bandden.posts(post_id,user_id,title,content) VALUES
-(1,1,"help wanted","i need help with my project"),
-(2,1,"never mind i found help","i dont need you guys anymore"),
-(3,2,"come help me instead","guys i need the help this if guy doesnt");
-
-
-INSERT INTO bandden.users(user_id,username,email,password) VALUES
-(1,"barrymusic","barry@music.com","1234qwerty"),
-(2,"steveOnTheTown","steve05@music.com","steve33");
+-- Insert into posts table
+INSERT INTO bandden.posts(user_id, title, content) VALUES
+(1, 'help wanted', 'I need help with my project'),
+(1, 'never mind I found help', 'I don''t need you guys anymore'),
+(2, 'come help me instead', 'Guys, I need the help; this if guy doesn''t');

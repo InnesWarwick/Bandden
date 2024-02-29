@@ -48,11 +48,11 @@
     </div>
 
     <main class="contentBlock col-2">
-
     <?php
-        require_once("Post.php");
-        $post = new Post();
-        $posts = $post->getPosts();
+        require_once("post.php");
+        $posts = Post::getPosts();
+        Post::displayPosts($posts);
+        echo "SJDIOAJIo";
     ?>
 
     </main>
