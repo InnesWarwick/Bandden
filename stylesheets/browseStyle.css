@@ -42,46 +42,20 @@ select{
     transition: all ease-in-out 0.6s;
     color: #3ab09e;
 }
-
-.plus-button {
-    position: absolute;
-    appearance: button;
-	border: 0.15em solid #E2B714;
-	background-color: #2C2E31;
-	font-size: 16px;
-	height: 2.5em;
-	width: 2.5em;
-	border-radius: 999px;
-	transition: all ease-in-out 0.3s;
-	&:after,
-	&:before {
-		content: "";
-		display: block;
-		background-color: #3ab09e;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
-	
-	&:before {
-		height: 1em;
-		width: 0.2em;
-	}
-
-	&:after {
-		height: 0.2em;
-		width: 1em;
-	}
+.createpost{
+  transition: all ease-in-out 0.6s;
+  text-decoration: none;
+  color: #26282b;
+  background-color: #E2B714;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin: 1em;
+  float: right;
 }
 
-.plus-button:hover{
-
-    transition: all ease-in-out 0.6s;
-    transform: rotate(90deg);
-    background-color: #E2B714;
-
-}
-.plus-button--large {
-	font-size: 22px;
+.createpost:hover{
+    transition: all ease-in-out 0.3s;
+    color: #E2B714;
+    background-color: #26282b;
+    border-radius: 0;
 }

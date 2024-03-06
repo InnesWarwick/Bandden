@@ -9,6 +9,12 @@ body {
     min-height: 100vh;
 
 }
+.error{
+    background-color: #E2B714;
+    padding: 3rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
 .logoDiv{
     display: flex;
     justify-content: center;

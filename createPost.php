@@ -34,10 +34,22 @@
             </div>
             <div class="postBox">
                 <h3 class="postText">Post</h3>
-                <textarea name="post" class="post" placeholder = "Post content..." cols="100" rows="2"></textarea>
+                <textarea name="post" class="post" placeholder = "Post content..." cols="30" rows="2"></textarea>
             </div>
             <input type="submit" class="submitButton" value="Submit">
     </form>
+    <?php
+    require_once("db_connection.php");
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+        $title = filter_input(INPUT_POST,'firstname',FILTER_SANITIZE_STRING);
+        $content = filter_input(INPUT_POST,'post',FILTER_SANITIZE_STRING);
+        if(empty($title)||empty($content)){
+            echo "<p class='error'>Title and content are required</p>";
+            echo '<script>';
+            echo 'window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });'; 
+            echo '</script>';        }
+    }
+    ?>
     </main>
 
     <div class="footerBar"></div>

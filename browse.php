@@ -44,7 +44,7 @@
             <option value="band">Oldest</option>
             <option value="work">Newest</option>
         </select>
-        <a class="plus-button plus-button--large" href="createPost.php"></a>
+        <a class="createpost" href="createPost.php">Create post</a>
     </div>
 
     <main class="contentBlock col-2">
@@ -52,7 +52,6 @@
         require_once("classes/post.php");
         $posts = Post::getPosts();
         Post::displayPosts($posts);
-        echo "SJDIOAJIo";
     ?>
 
     </main>
