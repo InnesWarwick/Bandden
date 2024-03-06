@@ -9,7 +9,6 @@ class Post{
         $stmt -> execute();
         $posts = $stmt->fetchAll();
         $conn = null;
-        echo "HSDIOjaioda";
         return $posts;
 
     }
