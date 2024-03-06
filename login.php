@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/generalStyle.css">
-    <link rel="stylesheet" href="stylesheets/loginStyle.css">
+    <link rel="stylesheet" href="stylesheets/createPostStyle.css">
     <title>Bandden</title>
 </head>
 
@@ -25,22 +25,19 @@
     </div>
 
     <main class="contentBlock">
-        <a class="leftContentHome" href="profile.php">
-            <h1>Make your profile!</h1>
-            <p>Join Bandden today and take the first step towards a musical future filled with creativity,
-                collaboration, and unforgettable performances. Don't miss out on the chance to make your mark in the
-                world of music. Create your profile now and let the fun begin!
-            </p>
-            <div class="profileButton"></div>
-        </a>
-        <a class="rightContentHome" href="browse.php">
-            <h1>Browse local posts!</h1>
-            <p>The world of music is waiting to be explored, and Bandden is your gateway. Browse band posts, discover
-                fresh sounds, and connect with like-minded individuals who share your passion. Your next musical
-                adventure awaits - start exploring today!
-            </p>
-            <div class="browseButtonPage"></div>
-        </a>
+        
+    <form class="postForm" method = "post" action = "createPost.php">
+            <div class="title">
+                <h3 class="titleText">Email</h3>
+                <input type="text" class="fnameInput" name="firstname" placeholder="user@me.com">
+            </div>
+            <div class="postBox">
+                <h3 class="postText">Password</h3>
+                <input type="text" class="fnameInput" name="firstname" placeholder="************">
+            </div>
+            <input type="submit" class="submitButton" value="Login">
+            <input type="submit" class="submitButton" value="Register">
+    </form>
     </main>
 
     <div class="footerBar"></div>
