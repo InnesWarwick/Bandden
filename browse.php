@@ -49,7 +49,7 @@
 
     <main class="contentBlock col-2">
     <?php
-        require_once("post.php");
+        require_once("classes/post.php");
         $posts = Post::getPosts();
         Post::displayPosts($posts);
     ?>
