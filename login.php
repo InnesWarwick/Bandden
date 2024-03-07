@@ -26,7 +26,7 @@
 
     <main class="contentBlock">
         
-    <form class="postForm" method = "post" action = "createPost.php">
+    <form class="postForm" method = "post" action = "login.php">
             <div class="title">
                 <h3 class="titleText">Email</h3>
                 <input type="text" class="fnameInput" name="firstname" placeholder="user@me.com">
