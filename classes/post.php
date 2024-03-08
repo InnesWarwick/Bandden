@@ -1,6 +1,6 @@
 <?php 
-require_once("db_connection.php");
-require_once("sql.php");
+require_once("classes/db_connection.php");
+require_once("classes/sql.php");
 class Post{
     public static function getPosts(){ 
 

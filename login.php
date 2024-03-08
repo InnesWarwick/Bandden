@@ -1,5 +1,25 @@
 <?php 
 session_start();
+require("classes/utils.php");
+
+if(isset($_SESSION["loggedIn"])){
+    header("Location: ".Utils::$projectFilePath);
+}
+$output ="";
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+    require("classes/user.php");
+    if(isset($_POST["loginSubmit"])){
+        $output = User::login();
+        if(!output){
+            header("Location: ".Utils::$projectFilePath);
+        }
+    }else if(isset($_POST["registerSubmit"])){
+        $output = User::register();
+        if(!output){
+            header("Location: ".Utils::$projectFilePath);
+        }
+    }
+}
 
 ?>
 
@@ -31,17 +51,21 @@ session_start();
 
     <main class="contentBlock">
         
-    <form class="postForm" method = "post" action = "login.php">
+    <form class="postForm" method = "POST" action = <?php echo $_SERVER["PHP_SELF"]; ?>>
             <div class="title">
                 <h3 class="titleText">Email</h3>
-                <input type="text" class="fnameInput" name="firstname" placeholder="user@me.com">
+                <input type="text" name="email"class="fnameInput" placeholder="user@me.com">
             </div>
-            <div class="postBox">
+            <div class="title">
+                <h3 class="titleText">Username</h3>
+                <input type="text" name="username"class="fnameInput" placeholder="user123">
+            </div>
+            <div class="title">
                 <h3 class="postText">Password</h3>
-                <input type="text" class="fnameInput" name="firstname" placeholder="************">
+                <input type="text" class="fnameInput" placeholder="************">
             </div>
-            <input type="submit" class="submitButton" value="Login">
-            <input type="submit" class="submitButton" value="Register">
+            <input type="submit" class="submitButton" value="loginSubmit">
+            <input type="submit" class="submitButton" value="registerSubmit">
     </form>
     </main>
 
