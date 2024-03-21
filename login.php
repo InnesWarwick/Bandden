@@ -3,8 +3,7 @@ session_start();
 require("classes/utils.php");
 
 if(isset($_SESSION["loggedIn"])){
-    header("Location: ".Utils::$projectFilePath);
-    exit(); // Ensure that script execution stops after redirection
+    header("Location: index.php");
 }
 
 $output = "";
@@ -13,21 +12,13 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     if(isset($_POST["loginSubmit"])){
         $output = User::login();
         if(!$output){
-            // Handle unsuccessful login
-        } else {
-            // Redirect the user after successful login
             header("Location: index.php");
-            exit();
-        }
+        } 
     } else if(isset($_POST["registerSubmit"])){
         $output = User::register();
         if(!$output){
-            // Handle unsuccessful registration
-        } else {
-            // Redirect the user after successful registration
-            header("Location: index.php");
-            exit();
-        }
+            header("Location: index.php");    
+        } 
     }
 }
 ?>
@@ -55,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         <a class="browseButton" href="browse.php">Browse</a>
         <a class="contactUs" href="contactUs.php"> contact us</a>
     </div>
-
+    <div><?php echo $output; ?></div>
     <main class="contentBlock">
         <form class="postForm" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
             <div class="title">

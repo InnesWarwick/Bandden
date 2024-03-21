@@ -20,7 +20,7 @@ class User {
         if (!password_verify($_POST["password"], $user["password"])) {
             return "<p class='error'> ERROR: Incorrect password</p>";
         }
- 
+        
         $_SESSION["loggedIn"] = true;
         $_SESSION["user_id"] = $user["user_id"];
         $_SESSION["username"] = $_POST["username"];
