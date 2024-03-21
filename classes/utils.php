@@ -1,7 +1,7 @@
 <?php
 
 class Utils {
-  public static $projectFilePath = "http://localhost/index.php";
+  public static $projectFilePath = "http://localhost/";
 
   /**
    * Takes an array of $_POST[] keys and checks if any 

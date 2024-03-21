@@ -4,28 +4,36 @@ require("classes/utils.php");
 
 if(isset($_SESSION["loggedIn"])){
     header("Location: ".Utils::$projectFilePath);
+    exit(); // Ensure that script execution stops after redirection
 }
-$output ="";
+
+$output = "";
 if($_SERVER["REQUEST_METHOD"] === "POST"){
     require("classes/user.php");
     if(isset($_POST["loginSubmit"])){
         $output = User::login();
-        if(!output){
-            header("Location: ".Utils::$projectFilePath);
+        if(!$output){
+            // Handle unsuccessful login
+        } else {
+            // Redirect the user after successful login
+            header("Location: index.php");
+            exit();
         }
-    }else if(isset($_POST["registerSubmit"])){
+    } else if(isset($_POST["registerSubmit"])){
         $output = User::register();
-        if(!output){
-            header("Location: ".Utils::$projectFilePath);
+        if(!$output){
+            // Handle unsuccessful registration
+        } else {
+            // Redirect the user after successful registration
+            header("Location: index.php");
+            exit();
         }
     }
 }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +42,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <link rel="stylesheet" href="stylesheets/createPostStyle.css">
     <title>Bandden</title>
 </head>
-
 <body>
     <div class="logoDiv">
         <img src="BanndenLogo.png" alt="website logo">
@@ -50,27 +57,24 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     </div>
 
     <main class="contentBlock">
-        
-    <form class="postForm" method = "POST" action = <?php echo $_SERVER["PHP_SELF"]; ?>>
+        <form class="postForm" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
             <div class="title">
                 <h3 class="titleText">Email</h3>
-                <input type="text" name="email"class="fnameInput" placeholder="user@me.com">
+                <input type="text" name="email" class="fnameInput" placeholder="user@me.com">
             </div>
             <div class="title">
                 <h3 class="titleText">Username</h3>
-                <input type="text" name="username"class="fnameInput" placeholder="user123">
+                <input type="text" name="username" class="fnameInput" placeholder="user123">
             </div>
             <div class="title">
-                <h3 class="postText">Password</h3>
-                <input type="text" class="fnameInput" placeholder="************">
+                <h3 class="titleText">Password</h3>
+                <input type="password" name="password" class="fnameInput" placeholder="************">
             </div>
-            <input type="submit" class="submitButton" value="loginSubmit">
-            <input type="submit" class="submitButton" value="registerSubmit">
-    </form>
+            <input type="submit" name="loginSubmit" class="submitButton" value="Login">
+            <input type="submit" name="registerSubmit" class="submitButton" value="Register">
+        </form>
     </main>
 
     <div class="footerBar"></div>
-
 </body>
-
 </html>
