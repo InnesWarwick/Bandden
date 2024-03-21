@@ -90,7 +90,14 @@ body {
 }
 
 
+.logout{
+    color: #26282b;
+    text-decoration: none;
+    background-color: #E2B714;
+    padding: 1em;
+    border-radius: 1rem;
 
+}
 
 /* Mobile size media screen*/
 @media screen and (max-width: 671px) {
