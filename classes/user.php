@@ -20,7 +20,7 @@ class User {
         if (!password_verify($_POST["password"], $user["password"])) {
             return "<p class='error'> ERROR: Incorrect password</p>";
         }
-        
+
         $_SESSION["loggedIn"] = true;
         $_SESSION["user_id"] = $user["user_id"];
         $_SESSION["username"] = $_POST["username"];
@@ -49,16 +49,16 @@ class User {
         if($errors) {
             return $errors;
         }
+
         $conn = Connection::connect();
- 
         $stmt = $conn->prepare(SQL::$getUser);
+        // return "<p class ='error'> CONNECTED</p>";
         $stmt->execute([$username]);
         $user = $stmt->fetch();
- 
         if (!empty($user)) {
             return "<p class='error'>ERROR: User already exists</p>";
         }
- 
+        
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         $stmt = $conn->prepare(SQL::$createUser);
         $stmt->execute([$username, $filteredEmail, $hashedPassword]);
