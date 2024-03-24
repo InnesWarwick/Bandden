@@ -14,6 +14,7 @@ class Post{
         return $posts;
 
     }
+
     public static function getPost($postId){
 
         $conn = Connection::connect();
@@ -24,6 +25,16 @@ class Post{
         return $post;
     }
 
+    public static function deletePost($postId){
+
+        $conn = Connection::connect();
+        $stmt = $conn->prepare(SQL::$deletePost);
+        var_dump($postId);
+        $stmt->execute([$postId]);
+        $conn = null;
+        header("Location: browse.php");
+        return "";
+    }
     public static function displayPosts($posts){
         session_start();
         foreach ($posts as $post) {
@@ -32,13 +43,20 @@ class Post{
             echo "<h2>" . htmlspecialchars($post["title"]) . "</h2>";
             echo "<p>" . htmlspecialchars($post["content"]) . "</p>";
             if ($post["user_id"] == $_SESSION["user_id"]){
-                echo "<form method='post' action=''>"; // Replace 'delete_post.php' with the actual delete post handler
-                echo "<input type='hidden' name='post_id' value='" . $post["post_id"] . "'>"; 
+                echo "<form method='POST'>";
+                echo "<input type='hidden' name='action' value='delete'>";
+                echo "<input type='hidden' name='post_id' value='" . $post["post_id"] . "'>";
                 echo "<input type='submit' value='Delete'>";
                 echo "</form>";
             }
             echo "</div>";
         }
+        if(isset($_POST["action"]) && $_POST["action"] == "delete" && isset($_POST["post_id"])) {
+            $postId = $_POST["post_id"];
+            $result = self::deletePost($postId); 
+            echo "<p>$result</p>";
+        }
+        
     }
     public static function createPost() {
         if(Utils::postValuesAreEmpty(["title", "content"])) {
