@@ -42,7 +42,7 @@ class Post{
             echo "<div class='post'>";
             echo "<h2>" . htmlspecialchars($post["title"]) . "</h2>";
             echo "<p>" . htmlspecialchars($post["content"]) . "</p>";
-            if ($post["user_id"] == $_SESSION["user_id"]){
+            if ($post["user_id"] == $_SESSION["user_id"] || $_SESSION["user_role"] == "Admin"){
                 echo "<form method='POST'>";
                 echo "<input type='hidden' name='action' value='delete'>";
                 echo "<input type='hidden' name='post_id' value='" . $post["post_id"] . "'>";
