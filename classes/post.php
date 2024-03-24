@@ -25,10 +25,18 @@ class Post{
     }
 
     public static function displayPosts($posts){
+        session_start();
         foreach ($posts as $post) {
+    
             echo "<div class='post'>";
             echo "<h2>" . htmlspecialchars($post["title"]) . "</h2>";
             echo "<p>" . htmlspecialchars($post["content"]) . "</p>";
+            if ($post["user_id"] == $_SESSION["user_id"]){
+                echo "<form method='post' action=''>"; // Replace 'delete_post.php' with the actual delete post handler
+                echo "<input type='hidden' name='post_id' value='" . $post["post_id"] . "'>"; 
+                echo "<input type='submit' value='Delete'>";
+                echo "</form>";
+            }
             echo "</div>";
         }
     }
