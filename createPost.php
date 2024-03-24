@@ -1,3 +1,15 @@
+<?php 
+$output = "";
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+    require_once("classes/post.php");
+    if(isset($_POST["submit"])){
+        $output = Post::createPost();
+        if(!$output){
+            header("Location: browse.php");
+        }
+    }
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,33 +36,21 @@
         <a class="browseButton" href="browse.php">Browse</a>
         <a class="contactUs" href="contactUs.php"> contact us</a>
     </div>
-
     <main class="contentBlock">
-       
-    <form class="postForm" method = "post" action = "createPost.php">
-            <div class="title">
-                <h3 class="titleText">Title</h3>
-                <input type="text" class="fnameInput" name="firstname" placeholder="Title...">
-            </div>
-            <div class="postBox">
-                <h3 class="postText">Post</h3>
-                <textarea name="post" class="post" placeholder = "Post content..." cols="30" rows="2"></textarea>
-            </div>
-            <input type="submit" class="submitButton" value="Submit">
+    <div><?php echo $output; ?></div>
+    <form class="postForm" method="POST" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+        <div class="title">
+            <h3 class="titleText">Title</h3>
+            <input type="text" class="fnameInput" name="title" placeholder="Title">
+        </div>
+        <div class="postBox">
+            <h3 class="postText">Post</h3>
+            <textarea name="content" class="post" placeholder="Post content..." cols="30" rows="2"></textarea>
+        </div>
+        <input type="submit" class="submitButton" value="Submit" name="submit">
     </form>
-    <?php
-    require_once("db_connection.php");
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-        $title = filter_input(INPUT_POST,'firstname',FILTER_SANITIZE_STRING);
-        $content = filter_input(INPUT_POST,'post',FILTER_SANITIZE_STRING);
-        if(empty($title)||empty($content)){
-            echo "<p class='error'>Title and content are required</p>";
-            echo '<script>';
-            echo 'window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });'; 
-            echo '</script>';        }
-    }
-    ?>
     </main>
+
 
     <div class="footerBar"></div>
 

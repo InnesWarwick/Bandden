@@ -52,7 +52,6 @@ class User {
 
         $conn = Connection::connect();
         $stmt = $conn->prepare(SQL::$getUser);
-        // return "<p class ='error'> CONNECTED</p>";
         $stmt->execute([$username]);
         $user = $stmt->fetch();
         if (!empty($user)) {
