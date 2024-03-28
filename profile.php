@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if(!isset($_SESSION["loggedIn"])){
+    header("Location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/generalStyle.css">
     <link rel="stylesheet" href="stylesheets/profileStyle.css">
+    <link rel="stylesheet" href="stylesheets/browseStyle.css">
     <title>Bandden</title>
 </head>
 
@@ -24,18 +31,13 @@
     </div>
     <main class="contentBlock">
         <div class="profileInfo">
-            <h2>Username</h2>
-            <h3><a>Guitar</a>
-                <a>Drums</a>
-                <a>production</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vel dapibus massa. Cras vitae fermentum enim.
-                Vivamus viverra ligula eu maximus cursus. Nam dui lacus, rhoncus a tempus quis, mattis quis elit. Nulla
-                vel condimentum ex. Pellentesque tincidunt fermentum sem, at volutpat lectus bibendum ut. Aliquam
-                laoreet lacus quam, sit amet sodales eros venenatis at. Duis bibendum dictum turpis, nec imperdiet nulla
-                dapibus eu. Ut ullamcorper ullamcorper auctor. Nunc dictum orci elit, non ultricies velit bibendum et.
-                Vivamus nec arcu et ipsum rutrum ullamcorper. Phasellus at lorem eu eros convallis ullamcorper eu at ex.
-                Phasellus pulvinar elementum volutpat.</p>
+            <?php
+                $user_id = $_SESSION["user_id"];
+                echo "<h2>".$_SESSION["username"]."</h2>";
+                require_once("classes/post.php");
+                $posts = Post::getPostsOfUser($user_id);
+                Post::displayPosts($posts);
+            ?>
         </div>
     </main>
     <div class="footerBar"></div>

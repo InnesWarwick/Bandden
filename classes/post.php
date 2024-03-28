@@ -24,12 +24,19 @@ class Post{
         $conn = null;
         return $post;
     }
-
+    public static function getPostsOfUser($user_id){
+        $conn = Connection::connect();
+        session_start();
+        $stmt = $conn->prepare(SQL::$getAllPostsOfUser);
+        $stmt -> execute([$user_id]);
+        $posts = $stmt->fetchAll();
+        $conn = null;
+        return $posts;
+    }
     public static function deletePost($postId){
 
         $conn = Connection::connect();
         $stmt = $conn->prepare(SQL::$deletePost);
-        var_dump($postId);
         $stmt->execute([$postId]);
         $conn = null;
         header("Location: browse.php");
@@ -46,7 +53,7 @@ class Post{
                 echo "<form method='POST'>";
                 echo "<input type='hidden' name='action' value='delete'>";
                 echo "<input type='hidden' name='post_id' value='" . $post["post_id"] . "'>";
-                echo "<input type='submit' value='Delete'>";
+                echo "<input type='submit' class='deleteButton' value='Delete'>";
                 echo "</form>";
             }
             echo "</div>";

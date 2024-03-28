@@ -53,7 +53,6 @@
         $posts = Post::getPosts();
         Post::displayPosts($posts);
     ?>
-
     </main>
     <div class="footerBar"></div>
 

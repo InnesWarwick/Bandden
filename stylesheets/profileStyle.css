@@ -1,6 +1,13 @@
 
-.profilePageDetails{
-    background-color: #2C2E31;
-    border-radius: 1em;
+
+.contentBlock{
+ width: 100vw;
+}
+
+.profileInfo{
+    width: 100%;
+    padding: 1em;
     margin: 1em;
+    border-radius: 1em;
+    color: #E2B714;
 }
