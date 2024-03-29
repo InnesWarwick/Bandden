@@ -70,5 +70,26 @@ class User {
         $_SESSION["user_role"] = "Member";
         return "";
     }
+    public static function updatePassword($user){
+        if(Utils::postValuesAreEmpty(["password1", "password2"])) {
+            return "<p class='error'> ERROR: Not all form inputs filled</p>";
+        }
+        $errors = "";
+        $password1 = $_POST["password1"];
+        $password2 = $_POST["password2"];
+        if($password1 != $password2){
+            $errors .= "<p class='error'>ERROR: passwords dont match</p>";
+        }
+        if(strlen($password1) < 5){
+            $errors .= "<p class='error'>ERROR: invalid password</p>";
+        }
+        if($errors){
+            return $errors;
+        }
+        $hashedPassword = password_hash($password1, PASSWORD_BCRYPT);
+        $stmt = $conn->prepare(SQL::$changePassword);
+        $stmt->execute([$hashedPassword,$user]);
+        $conn = null;
+    }
 }
 ?>

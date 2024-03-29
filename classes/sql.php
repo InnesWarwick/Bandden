@@ -7,5 +7,6 @@ class SQL {
     public static $createPost = "INSERT INTO posts (user_id,title,content) VALUES (?,?,?)";
     public static $deletePost = "DELETE FROM posts WHERE post_id = ?";
     public static $getAllPostsOfUser = "SELECT * FROM posts WHERE user_id = ?";
+    public static $changePassword = "UPDATE users SET password = ? WHERE user_id = ?";
 }
 ?>
