@@ -91,6 +91,7 @@ class User {
         $stmt = $conn->prepare(SQL::$changePassword);
         $stmt->execute([$hashedPassword,$user]);
         $conn = null;
+        return "";
     }
 }
 ?>

@@ -11,3 +11,12 @@
     border-radius: 1em;
     color: #E2B714;
 }
+
+.change{
+    padding: 1em;
+    margin: auto;
+    text-decoration: none;
+    background-color: #E2B714;
+    color: #323437;
+    border-radius: 1em;
+}

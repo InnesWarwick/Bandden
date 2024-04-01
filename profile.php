@@ -23,6 +23,7 @@ if(!isset($_SESSION["loggedIn"])){
         <a href="profile.php">
         <img src="icons/account_circle_FILL0_wght400_GRAD-25_opsz40.png" alt="profile photo" class="profileIcon">
         </a>
+        <a href="classes/logout.php" class="logout">Logout</a>
     </div>
     <div class="navBar">
         <a class="homeButton" href="index.php">Home</a>
@@ -39,6 +40,8 @@ if(!isset($_SESSION["loggedIn"])){
                 Post::displayPosts($posts);
             ?>
         </div>
+        <a href="classes/changePassword.php" class="change">Change password</a>
+
     </main>
     <div class="footerBar"></div>
 </body>
