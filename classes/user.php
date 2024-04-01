@@ -87,6 +87,7 @@ class User {
             return $errors;
         }
         $hashedPassword = password_hash($password1, PASSWORD_BCRYPT);
+        $conn = Connection::connect();
         $stmt = $conn->prepare(SQL::$changePassword);
         $stmt->execute([$hashedPassword,$user]);
         $conn = null;
