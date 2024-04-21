@@ -1,8 +1,8 @@
 <?php 
 $credentials = array(
-    "server" => "localhost",
-    "user" => "innes",
-    "pass" => "funky",
+    "server" => "",
+    "user" => "root",
+    "pass" => "",
     "dbName" => "bandden",
 );
 ?> 
