@@ -27,7 +27,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     <div class="logoDiv">
         <img src="BanndenLogo.png" alt="website logo">
         <a href="profile.php">
-            <img src="icons/account_circle_FILL0_wght400_GRAD-25_opsz40.png" alt="profile photo" class="profileIcon">
+            <img src="icons/pfp.png" alt="profile photo" class="profileIcon">
         </a>
         <a href="classes/logout.php" class="logout">Logout</a>
 

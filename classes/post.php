@@ -26,7 +26,9 @@ class Post{
     }
     public static function getPostsOfUser($user_id){
         $conn = Connection::connect();
-        session_start();
+        if(!isset($_SESSION["loggedIn"])){
+            session_start();
+        }
         $stmt = $conn->prepare(SQL::$getAllPostsOfUser);
         $stmt -> execute([$user_id]);
         $posts = $stmt->fetchAll();
@@ -43,7 +45,9 @@ class Post{
         return "";
     }
     public static function displayPosts($posts){
-        session_start();
+        if(!isset($_SESSION["loggedIn"])){
+            session_start();
+        }
         foreach ($posts as $post) {
     
             echo "<div class='post'>";

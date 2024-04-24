@@ -21,7 +21,7 @@ if(!isset($_SESSION["loggedIn"])){
     <div class="logoDiv">
         <img src="BanndenLogo.png" alt="website logo">
         <a href="profile.php">
-        <img src="icons/account_circle_FILL0_wght400_GRAD-25_opsz40.png" alt="profile photo" class="profileIcon">
+            <img src="icons/pfp.png" alt="profile photo" class="profileIcon">
         </a>
         <a href="classes/logout.php" class="logout">Logout</a>
     </div>
@@ -40,7 +40,7 @@ if(!isset($_SESSION["loggedIn"])){
                 Post::displayPosts($posts);
             ?>
         </div>
-        <a href="classes/changePassword.php" class="change">Change password</a>
+        <a href="changePassword.php" class="change">Change password</a>
 
     </main>
     <div class="footerBar"></div>
